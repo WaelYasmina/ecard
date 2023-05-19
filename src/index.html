@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Card</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <section class="score-container">
+        <p id="p1"><span>Opponent: </span><span id="opponent-score">0</span></p>
+        <p id="p2"><span>Player: </span><span id="player-score">0</span></p>
+    </section>
+    <section class="result">
+    <svg
+        id="victory"
+        height="200%"
+        stroke="#000"
+        stroke-width="2"
+        class="text-line"
+        width="200%">
+        <text x="50%" dominant-baseline="middle" text-anchor="middle" y="50%">VICTORY</text>
+    </svg>
+    <svg
+        id="loss"
+        height="200%"
+        stroke="#000"
+        stroke-width="2"
+        class="text-line"
+        width="200%">
+        <text x="50%" dominant-baseline="middle" text-anchor="middle" y="50%">LOSS</text>
+    </svg>
+    <svg
+        id="draw"
+        height="200%"
+        stroke="#000"
+        stroke-width="2"
+        class="text-line"
+        width="200%">
+        <text x="50%" dominant-baseline="middle" text-anchor="middle" y="50%">DRAW</text>
+    </svg>
+    <button id="rematch">Rematch</button>
+    </section>
+    <script src="./js/scripts.js" type="module"></script>
+</body>
+</html>

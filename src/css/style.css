@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.score-container {
+    position: absolute;
+    left: 2%;
+    top: 15%;
+}
+
+.score-container p {
+    font-size: 1.4rem;
+    padding: 0.5rem;
+}
+
+.score-container p:first-child {
+    background: linear-gradient(90deg, rgba(83, 0, 0, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.score-container p:nth-child(2) {
+    background: linear-gradient(90deg, rgba(223, 207, 96, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.result {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+svg {
+    display: none;
+}
+
+.text-line {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    font-size: 6rem;
+    animation: dash 1.7s linear forwards, filling 1.7s ease-in forwards;
+}
+
+.text-line text {
+    font-family: 'Montserrat ExtraBold';
+}
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes filling {
+    0%, 90% {fill: #000; fill-opacity: 0;}
+    100% {fill: #000; fill-opacity: 1;}
+}
+
+button {
+    font-size: 1.5rem;
+    display: none;
+    opacity: 0;
+    animation: show 1.7s linear forwards;
+}
+
+@keyframes show {
+    to {
+        opacity: 1;
+    }
+}
