@@ -184,7 +184,12 @@ function resetAndUpdate(side, sideText) {
         opponentCards[i].rotation.set(Math.PI * 2, Math.PI, initialCardsRotations[i + 5]);
         opponentCards[i].scale.set(1, 1, 1);
 
-        CARDS[i].name = 'hand ' + CARDS[i].name;
+        if(CARDS[i].name === 'hand playerCard1 slave')
+            CARDS[i].name = CARDS[i].name;
+        else if(CARDS[i].name === 'hand playerCard1 emperor')
+            CARDS[i].name = CARDS[i].name;
+        else
+            CARDS[i].name = 'hand ' + CARDS[i].name;
     }
 
     if(round === 4)
